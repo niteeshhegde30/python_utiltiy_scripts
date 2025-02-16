@@ -2,8 +2,6 @@ import requests
 
 # API endpoint
 post_url = "http://localhost:8080/api/transactionService/addTransactions"
-get_url = "http://localhost:8080/api/transactionService/"
-
 
 
 headers = {
@@ -12,12 +10,11 @@ headers = {
 
 # Data to be sent in JSON format
 data = [
-    {"amount": 260.5, "date": "2024-12-11"}
+    {"amount": 270.5, "date": "2024-12-11"}
 ]
 
 # Making the POST request
 response = requests.post(post_url, json=data, headers=headers)
-# response = requests.get(get_url)
 
 # Checking response status
 if response.status_code == 200:

@@ -2,7 +2,6 @@ import requests
 from datetime import datetime
 
 # API endpoint
-post_url = "http://localhost:8080/api/transactionService/readTransactions"
 get_url = "http://localhost:8080/api/transactionService/readTransactions"
 
 headers = {
@@ -10,7 +9,6 @@ headers = {
 }
 
 date_filter = datetime.now().strftime("%Y-%m-%d")
-# date_filter = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 print(date_filter)
 
 filter = {
