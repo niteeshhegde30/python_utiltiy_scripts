@@ -1,14 +1,14 @@
+import json
 import requests
 
-# API endpoint
-post_url = "http://localhost:8080/api/transactionService/addTransactions"
+json_objects_file_path = r"json_objects_file_path"
 
+post_url = "http://localhost:8080/api/transactionService/addTransactions"
 
 headers = {
     "Content-Type": "application/json",
 }
 
-# Data to be sent in JSON format
 data = [
     {
         "amount": 270.5, 
@@ -19,12 +19,13 @@ data = [
     }
 ]
 
-# Making the POST request
-response = requests.post(post_url, json=data, headers=headers)
+with open(json_objects_file_path, "r") as f:
+    json_objects = json.load(f)
 
-# Checking response status
+response = requests.post(post_url, json=json_objects, headers=headers)
+
 if response.status_code == 200:
-    print("Success:", response)  # If response is in JSON format
-    print("Success:", response.text)  # If response is in JSON format
+    print("Success:", response)  
+    print("Success:", response.text) 
 else:
     print("Error:", response.status_code, response.text)
