@@ -14,8 +14,10 @@ print(date_filter)
 filter = {
     # "amount": 5, 
     # "comment" : "",
-    "startDate" : "2023-12-14",
-    "endDate" : "2025-12-14"
+    # "category" : "dummry_category",
+    "subCategory" : "dummry_sub_category",
+    # "startDate" : "2023-12-14",
+    # "endDate" : "2025-12-14"
     # "startDate" : datetime.now().strftime("%Y-%m-%d"),
     # "format" : "json"
 }

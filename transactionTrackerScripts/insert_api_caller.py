@@ -10,7 +10,13 @@ headers = {
 
 # Data to be sent in JSON format
 data = [
-    {"amount": 270.5, "date": "2024-12-11"}
+    {
+        "amount": 270.5, 
+        "date": "2024-12-11", 
+        "comment": "abc",
+        "category": "dummry_category",
+        "subCategory": "dummry_sub_category"
+    }
 ]
 
 # Making the POST request
